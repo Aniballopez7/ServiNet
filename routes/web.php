@@ -16,12 +16,11 @@ use App\Http\Controllers\cursoController;
 |
 */
 
-Route::get('/', homeController::class);
 
-//grupos de rutas
-// Route::controller(cursoController::class)->group(function(){
-//     Route::get('cursos','index');
-//     Route::get('cursos/create','create');
-//     Route::get('cursos/show','show');
-// });
+Auth::routes();
 
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/home', function () {
+    return view('homepage');
+})->middleware('auth'); //logueado para entrar en modo de ejemplo (no aplicable)

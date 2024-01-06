@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('tests', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable(); //siempre que un campo quede vacio hay qie ponerle nullable
-            $table->string('password');
+            $table->string('description');
+            $table->string('ref_url')->unique();
             $table->rememberToken();
             $table->timestamps(); //cada vez que se introduzca un registro se guardara y si se modifica tambien
         });
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('tests');
     }
 };

@@ -1,69 +1,23 @@
-@extends('layouts.plantilla')
-@section('title', 'ServiNet')
+@extends('layouts.app')
+
 @section('content')
-    <div class="recently-added">
-        <h2>Ultimos añadidos</h2>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    {{ __('You are logged in!') }}
+                </div>
+            </div>
+        </div>
     </div>
-    <section class="services">
-        <div class="services-card">
-            <div class="container-img">
-                <img src="https://th.bing.com/th/id/R.4b4dfce5cc39d3fe58463d18593da9f0?rik=%2b3MT5Pzj9EzbDQ&pid=ImgRaw&r=0"
-                    class="imagen-prov">
-            </div>
-            <div class='container-servicio'>
-                <p class="servicio-prov">Astronauta</p>
-            </div>
-            <div class='container-precio'>
-                <p class="precio-servicio">3600$</p>
-            </div>
-        </div>
-        <div class="services-card">
-            <div class="container-img">
-                <img src="https://th.bing.com/th/id/R.4b4dfce5cc39d3fe58463d18593da9f0?rik=%2b3MT5Pzj9EzbDQ&pid=ImgRaw&r=0"
-                    class="imagen-prov">
-            </div>
-            <div class='container-servicio'>
-                <p class="servicio-prov">Astronauta</p>
-            </div>
-            <div class='container-precio'>
-                <p class="precio-servicio">3600$</p>
-            </div>
-        </div>
-        <div class="services-card">
-            <div class="container-img">
-                <img src="https://th.bing.com/th/id/R.4b4dfce5cc39d3fe58463d18593da9f0?rik=%2b3MT5Pzj9EzbDQ&pid=ImgRaw&r=0"
-                    class="imagen-prov">
-            </div>
-            <div class='container-servicio'>
-                <p class="servicio-prov">Astronauta</p>
-            </div>
-            <div class='container-precio'>
-                <p class="precio-servicio">3600$</p>
-            </div>
-        </div>
-        <div class="services-card">
-            <div class="container-img">
-                <img src="https://th.bing.com/th/id/R.4b4dfce5cc39d3fe58463d18593da9f0?rik=%2b3MT5Pzj9EzbDQ&pid=ImgRaw&r=0"
-                    class="imagen-prov">
-            </div>
-            <div class='container-servicio'>
-                <p class="servicio-prov">Astronauta</p>
-            </div>
-            <div class='container-precio'>
-                <p class="precio-servicio">3600$</p>
-            </div>
-        </div>
-        <div class="services-card">
-            <div class="container-img">
-                <img src="https://th.bing.com/th/id/R.4b4dfce5cc39d3fe58463d18593da9f0?rik=%2b3MT5Pzj9EzbDQ&pid=ImgRaw&r=0"
-                    class="imagen-prov">
-            </div>
-            <div class='container-servicio'>
-                <p class="servicio-prov">Astronauta</p>
-            </div>
-            <div class='container-precio'>
-                <p class="precio-servicio">3600$</p>
-            </div>
-        </div>
-    </section>
+</div>
 @endsection
