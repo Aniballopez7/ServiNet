@@ -24,3 +24,19 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/home', function () {
     return view('homepage');
 })->middleware('auth'); //logueado para entrar en modo de ejemplo (no aplicable)
+
+Route::get('/dashboard', function () {
+    return view('dashboard.index');
+});
+Route::get('/roles', function () {
+    return view('dashboard.roles.index');
+});
+Route::get('/verifications', function () {
+    return view('dashboard.verifications.index');
+});
+Route::get('/tests', function () {
+    return view('dashboard.tests.index');
+});
+Route::get('/suppliers', function () {
+    return view('dashboard.suppliers.index');
+});

@@ -1,4 +1,4 @@
-@extends('layouts.plantilla')
+@extends('layouts.navFront')
 @section('title', 'ServiNet')
 @section('content')
     <div class="recently-added">
