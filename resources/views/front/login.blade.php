@@ -1,6 +1,7 @@
-@extends('layouts.plantilla')
+@extends('layouts.loginRegister')
 @section('title', 'Login')
 @section('content')
+<div class="container">
     <section>
         <form>
             <h1>Iniciar Sesion</h1>
@@ -24,4 +25,5 @@
             </div>
         </form>
     </section>
+</div>
 @endsection

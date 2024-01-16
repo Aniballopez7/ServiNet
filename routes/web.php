@@ -24,8 +24,9 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/home', function () {
-    return view('homepage');
-})->middleware('auth'); //logueado para entrar en modo de ejemplo (no aplicable)
+    return view('front.home.index');
+});
+// ->middleware('auth'); //logueado para entrar en modo de ejemplo (no aplicable)
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');
@@ -46,3 +47,13 @@ Route::resource('verification',VerificationController::class);
 Route::get('/suppliers', function () {
     return view('dashboard.suppliers.index');
 });
+
+Route::get('/registro', function () {
+    return view('front.register');
+});
+
+Route::get('/entrar', function () {
+    return view('front.login');
+});
+
+
