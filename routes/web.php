@@ -1,9 +1,11 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\cursoController;
+use App\Http\Controllers\RolsController;
+use App\Http\Controllers\TestController;
+use App\Http\Controllers\VerificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,15 +30,19 @@ Route::get('/home', function () {
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
-Route::get('/roles', function () {
+/* Route::get('/roles', function () {
     return view('dashboard.roles.index');
-});
-Route::get('/verifications', function () {
+}); */
+/* Route::get('/verifications', function () {
     return view('dashboard.verifications.index');
-});
-Route::get('/tests', function () {
+}); */
+Route::resource('roles',RolsController::class);
+Route::resource('test',TestController::class);
+Route::resource('verification',VerificationController::class);
+
+/* Route::get('/tests', function () {
     return view('dashboard.tests.index');
-});
+}); */
 Route::get('/suppliers', function () {
     return view('dashboard.suppliers.index');
 });

@@ -17,6 +17,6 @@ class Verification extends Model
     protected $fillable = ['name', 'tests_id'];
 
     public function tests(){
-        return $this->hasMany(Test::class, 'tests_id', 'id');
+        return $this->belongsTo(Test::class, 'tests_id', 'id');
     }
 }

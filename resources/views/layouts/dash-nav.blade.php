@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="{{ asset('css/material-design-iconic-font.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/jquery.mCustomScrollbar.css') }}">
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="{{ asset('js/material.min.js') }}" ></script>
@@ -60,7 +62,7 @@
                     </a>
                     <ul class="full-width menu-principal sub-menu-options">
                         <li class="full-width">
-                            <a href="/tests" class="full-width">
+                            <a href="/test" class="full-width">
                                 <div class="navLateral-body-cl">
                                     <i class="zmdi zmdi-balance"></i>
                                 </div>
@@ -70,7 +72,7 @@
                             </a>
                         </li>
                         <li class="full-width">
-                            <a href="/verifications" class="full-width">
+                            <a href="/verification" class="full-width">
                                 <div class="navLateral-body-cl">
                                     <i class="zmdi zmdi-truck"></i>
                                 </div>
@@ -153,6 +155,7 @@
         </div>
     
 </section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>

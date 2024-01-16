@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,11 +14,36 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        $roleId= DB::table('rols')->insertGetId([
+            'name' => 'administrator',
+            'remember_token' => Str::random(10),
+            'created_at' => now(), 
+            'updated_at' => now(), 
+        ]);
+        
+        DB::table('users')->insert([
+            'name' => 'admin',
+            'email'=> 'admin@admin.com',
+            'email_verified_at' => now(),
+            'password' => bcrypt('admin12345'), // Cifrar la contraseña usando Bcrypt
+            'rols_id' => $roleId,
+            'remember_token' => Str::random(10),
+            'created_at' => now(), 
+            'updated_at' => now(), 
+        ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        DB::table('rols')->insert([
+            'name' => 'supplier',
+            'remember_token' => Str::random(10),
+            'created_at' => now(), 
+            'updated_at' => now(), 
+        ]);
+        DB::table('rols')->insert([
+            'name' => 'customer',
+            'remember_token' => Str::random(10),
+            'created_at' => now(), 
+            'updated_at' => now(), 
+        ]);
+
     }
 }

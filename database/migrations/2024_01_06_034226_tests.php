@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('tests', function (Blueprint $table) {
             $table->id();
             $table->string('description');
-            $table->string('ref_url')->unique();
+            $table->string('ref_url');
             $table->rememberToken();
             $table->timestamps(); //cada vez que se introduzca un registro se guardara y si se modifica tambien
         });

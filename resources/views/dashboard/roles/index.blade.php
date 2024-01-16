@@ -17,10 +17,10 @@
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
     <div class="mdl-tabs__tab-bar">
-        <a href="#tabNewPayment" class="mdl-tabs__tab is-active">Nuevo</a>
-        <a href="#tabListPayment" class="mdl-tabs__tab">Listado</a>
+        <a href="#tabListPayment" class="mdl-tabs__tab is-active">Listado</a>
+        {{-- <a href="#tabNewPayment" class="mdl-tabs__tab">Nuevo</a> --}}
     </div>
-    <div class="mdl-tabs__panel is-active" id="tabNewPayment">
+    {{-- <div class="mdl-tabs__panel" id="tabNewPayment">
         <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--12-col">
                 <div class="full-width panel mdl-shadow--2dp">
@@ -28,7 +28,7 @@
                         Nuevo Rol
                     </div>
                     <div class="full-width panel-content">
-                        <form> {{-- aca --}}
+                        <form> 
                             <div class="mdl-grid">
                                 <div class="mdl-cell mdl-cell--12-col">
                                     <legend class="text-condensedLight"><i class="zmdi zmdi-border-color"></i> &nbsp; Informacion </legend><br>
@@ -51,9 +51,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
-    <div class="mdl-tabs__panel" id="tabListPayment">
+    <div class="mdl-tabs__panel is-active" id="tabListPayment">
         <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--8-col-desktop mdl-cell--2-offset-desktop">
                 <div class="full-width panel mdl-shadow--2dp">
@@ -62,32 +62,16 @@
                     </div>
                     <div class="full-width panel-content">
                         <div class="mdl-list">
+                            @foreach ($rols as $rol)                                
                             <div class="mdl-list__item mdl-list__item--two-line">
                                 <span class="mdl-list__item-primary-content">
                                     <i class="zmdi zmdi-card mdl-list__item-avatar"></i>
-                                    <span>1. Payment method</span>
-                                    <span class="mdl-list__item-sub-title">Sub tittle</span>
+                                    <span>{{$rol->id}}. {{$rol->name}}</span>
+                                    {{-- <span class="mdl-list__item-sub-title">Sub tittle</span> --}}
                                 </span>
-                                <a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
                             </div>
-                            <li class="full-width divider-menu-h"></li>
-                            <div class="mdl-list__item mdl-list__item--two-line">
-                                <span class="mdl-list__item-primary-content">
-                                    <i class="zmdi zmdi-card mdl-list__item-avatar"></i>
-                                    <span>2. Payment method</span>
-                                    <span class="mdl-list__item-sub-title">Sub tittle</span>
-                                </span>
-                                <a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-                            </div>
-                            <li class="full-width divider-menu-h"></li>
-                            <div class="mdl-list__item mdl-list__item--two-line">
-                                <span class="mdl-list__item-primary-content">
-                                    <i class="zmdi zmdi-card mdl-list__item-avatar"></i>
-                                    <span>3. Payment method</span>
-                                    <span class="mdl-list__item-sub-title">Sub tittle</span>
-                                </span>
-                                <a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-                            </div>
+                            @endforeach
+                            
                         </div>
                     </div>
                 </div>
