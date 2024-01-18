@@ -11,8 +11,6 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #000000;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-repeat: no-repeat;
     background-position: center;
@@ -137,7 +135,7 @@ input:valid ~ label{
 }
 
 .forget a:hover{
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 button{
@@ -165,18 +163,45 @@ button:hover{
     background-color: #ffffff80;
 }
 .register {
+    display: flex;
     font-size: 0.9rem;
     color: #fff;
     text-align: center;
-    margin: 25px 0 10px;
+    margin: 25px 0 0px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.register p a{
+.btn-login{
+    background: linear-gradient(to right, #43434300, #00000000);
     text-decoration: none;
-    color: #fff;
     font-weight: 600;
+    flex-basis: 40%;
+    color: #fff;
+    margin-bottom: 1rem;
+    border: 2px solid #fff;
 }
 
-.register p a:hover{
-    text-decoration: underline;
+.btn-login:hover{
+    text-decoration: none;
+    color: #000;
+}
+.btn-register{
+    text-decoration: none;
+    font-weight: 600;
+    flex-basis: 40%;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.btn-register:hover{
+    text-decoration: none;
+}
+
+
+.btn-registerP{
+    flex-basis: 70%;
+}
+.btn-registerP:hover{
+    text-decoration: none;
 }

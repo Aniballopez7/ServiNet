@@ -56,4 +56,6 @@ Route::get('/entrar', function () {
     return view('front.login');
 });
 
-
+Route::get('/registroProvedor', function (){
+    return view('front.registerProviders');
+});
