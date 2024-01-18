@@ -106,7 +106,7 @@
                     </a>
                     <ul class="full-width menu-principal sub-menu-options">
                         <li class="full-width">
-                            <a href="/suppliers" class="full-width">
+                            <a href="/supplier" class="full-width">
                                 <div class="navLateral-body-cl">
                                     <i class="zmdi zmdi-account"></i>
                                 </div>
@@ -116,7 +116,7 @@
                             </a>
                         </li>
                         <li class="full-width">
-                            <a href="#" class="full-width">
+                            <a href="/customer" class="full-width">
                                 <div class="navLateral-body-cl">
                                     <i class="zmdi zmdi-accounts"></i>
                                 </div>

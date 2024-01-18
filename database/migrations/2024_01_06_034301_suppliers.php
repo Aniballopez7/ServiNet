@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('subname');
             $table->integer('dni');
             $table->integer('phone')->nullable();
+            $table->string('img_ref')->nullable();
             $table->unsignedBigInteger('users_id')->unsigned()->nullable();
             $table->foreign('users_id')
             ->cascadeOnDelete()

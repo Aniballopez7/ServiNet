@@ -14,11 +14,12 @@ class Supplier extends Model
         'subname' => 'required',
         'dni' => 'required',
         'phone' => 'required',
+        'img_ref' => 'required',
         'users_id' => 'required',
         'verifications_id' => 'required',
     ];
 
-    protected $fillable = ['name','subname','dni','phone','users_id','verifications_id',];
+    protected $fillable = ['name','subname','dni','phone','img_ref','users_id','verifications_id',];
 
     public function users(){
         return $this->hasMany(User::class, 'users_id', 'id');

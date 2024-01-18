@@ -2,37 +2,47 @@
 @section('title', 'Registro')
 @section('content')
     <section>
-        <form class="form-content">
+        <form class="form-content" method="POST" action="{{ route('supplier.store') }}"  role="form" enctype="multipart/form-data">
+            @csrf
             <h1 id="title">Registro Proveedores</h1>
+            <input type="hidden" name="rols_id" value="2">
             <div class="inputbox" id="a">
                 <ion-ico name="lock-closed-outline"></ion-ico>
-                <input type="text" required>
-                <label for="">Usuario</label>
-            </div>
-            <div class="inputbox" id="a">
-                <ion-ico name="lock-closed-outline"></ion-ico>
-                <input type="text" required>
+                <input type="text" name="name" required>
                 <label for="">Nombre</label>
             </div>
             <div class="inputbox">
                 <ion-ico name="lock-closed-outline"></ion-ico>
-                <input type="text" required>
+                <input type="text"name="subname" required>
                 <label for="">Apellido</label>
             </div>
             <div class="inputbox">
                 <ion-ico name="mail-outline"></ion-ico>
-                <input type="email" required>
+                <input type="number" name="dni" required>
                 <label for="">Cedula</label>
             </div>
             <div class="inputbox">
                 <ion-ico name="mail-outline"></ion-ico>
-                <input type="email" required>
-                <label for="">Edad</label>
+                <input type="email" name="email" required>
+                <label for="">Correo</label>
+            </div>
+            <div class="inputbox">
+                <ion-ico name="mail-outline"></ion-ico>
+                <input type="number" name="phone" required>
+                <label for="">Telefono</label>
+            </div>
+            <div class="inputbox">
+                <ion-ico name="lock-closed-outline"></ion-ico>
+                <input type="password" name="password" required>
+                <label for="">Contraseña</label>
             </div>
             <div class="register">
-                <button class="btn-login" type="button" id="singIn">Iniciar Sesion</button>
-                <button class="btn-register" type="button" id="singUp">Registrar</button>
-                <button class="btn-registerP" type="button">Registrarse como Cliente</button>
+                <button class="btn-register" type="submit" id="singUp">Registrar</button>
+                <button class="btn-registerP" type="button">
+                    <a href="/registro">
+                       Registrarse como Cliente
+                   </a>   
+                   </button>
             </div>
         </form>
     </section>

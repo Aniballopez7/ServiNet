@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\cursoController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\RolsController;
+use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\VerificationController;
 
@@ -39,7 +41,10 @@ Route::get('/dashboard', function () {
 }); */
 Route::resource('roles',RolsController::class);
 Route::resource('test',TestController::class);
-Route::resource('verification',VerificationController::class);
+Route::resource('customer',CustomerController::class);
+Route::resource('supplier',SupplierController::class);
+
+/* Route::resource('verification',VerificationController::class); */
 
 /* Route::get('/tests', function () {
     return view('dashboard.tests.index');
