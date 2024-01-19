@@ -26,7 +26,7 @@
             <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--8-col-desktop mdl-cell--2-offset-desktop">
                 <div class="full-width panel mdl-shadow--2dp">
                     <div class="full-width panel-tittle bg-success text-center tittles">
-                        Listado de Roles
+                        Listado de Clientes
                     </div>
                     <div class="full-width panel-content">
                         <div class="mdl-list">
@@ -36,6 +36,12 @@
                                     <i class="zmdi zmdi-card mdl-list__item-avatar"></i>
                                     <span>{{$customer->id}}. {{$customer->name}} {{$customer->subname}}</span>
                                 </span>
+                                <form action="{{ route('customer.destroy',$customer->id) }}" method="POST">
+                                   {{--  <a class="btn btn-sm btn-success" href="{{ route('supplier.edit',$customer->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a> --}}
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
+                                </form>
                             </div>
                             @endforeach
                             

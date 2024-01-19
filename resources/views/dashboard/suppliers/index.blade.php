@@ -28,13 +28,21 @@
                     </div>
                     <div class="full-width panel-content">
                         <div class="mdl-list">
-                            @foreach ($suppliers as $supplier)                                
-                            <div class="mdl-list__item mdl-list__item--two-line">
-                                <span class="mdl-list__item-primary-content">
-                                    <i class="zmdi zmdi-card mdl-list__item-avatar"></i>
+                            @foreach ($suppliers as $supplier)    
+                            
+                                <div class="mdl-list__item mdl-list__item--two-line">
+                                    <span class="mdl-list__item-primary-content">
+                                <i class="zmdi zmdi-card mdl-list__item-avatar"></i>
                                     <span>{{$supplier->id}}. {{$supplier->name}} {{$supplier->subname}}</span>
-                                </span>
-                            </div>
+                                    </span>
+                                    <form action="{{ route('supplier.destroy',$supplier->id) }}" method="POST">
+                                        <a class="btn btn-sm btn-success" href="{{ route('supplier.edit',$supplier->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
+                                    </form>
+                                </div>
+
                             @endforeach
                             
                         </div>

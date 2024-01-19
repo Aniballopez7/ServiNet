@@ -82,7 +82,8 @@ class CustomerController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        //desde la vista del perfil
+        
     }
 
     /**
@@ -90,6 +91,10 @@ class CustomerController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $customer = Customer::find($id);
+        $customer->delete();
+        
+        return redirect()->route('customer.index') //llevar a perfil de frontend
+            ->with('success', 'Eliminado con éxito');
     }
 }
