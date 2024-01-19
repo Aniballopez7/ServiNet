@@ -54,13 +54,28 @@ Route::get('/suppliers', function () {
 });
 
 Route::get('/registro', function () {
-    return view('front.register');
+    return view('front.register.register');
 });
 
 Route::get('/entrar', function () {
-    return view('front.login');
+    return view('front.login.login');
 });
 
 Route::get('/registroProvedor', function (){
     return view('front.registerProviders');
+});
+
+Route::get('/editarUsuario', function (){
+    return view('front.profileConfig.profileUser');
+});
+
+Route::get('/editarProvedor', function (){
+    return view('front.profileConfig.Providers');
+});
+Route::get('/verUsuario', function (){
+    return view('front.profileView.profileUser');
+});
+
+Route::get('/verProvedor', function (){
+    return view('front.profileView.Providers');
 });
