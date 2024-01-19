@@ -57,11 +57,11 @@
         </div>
         <navbar id="navbar">
             <ul id="navbar-ul">
-                <li><a>Carpintero</a></li>
-                <li><a>Abogado</a></li>
-                <li><a>Licenciado</a></li>
-                <li><a>Programador</a></li>
-                <li><a>Arquitecto</a></li>
+                <li class="margin"><a>Carpintero</a></li>
+                <li class="margin"><a>Abogado</a></li>
+                <li class="margin"><a>Licenciado</a></li>
+                <li class="margin"><a>Programador</a></li>
+                <li class="margin"><a>Arquitecto</a></li>
             </ul>
         </navbar>
         {{--Contenido de la pagona  --}}

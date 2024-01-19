@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
 *{
     padding: 0px;
@@ -38,6 +37,7 @@
 .titulo{
     color: #fff;
     text-decoration: none;
+    font-family: 'Fredoka';
 }
 
 #header form {
@@ -179,3 +179,7 @@ h2{
     color: #434343;
     transform: scale(1.15);
 }
+
+/* .margin{
+    margin: 0px 10px 0px 10px;
+} */
