@@ -59,8 +59,8 @@
   }
   
   .form_submit {
-    background-color: #434343;
-    color: #fff;
+    background-color: #fff;
+    color: #434343;
     font-size: 1rem;
     padding: 0.8em 0;
     border: none;
@@ -70,7 +70,7 @@
   }
   
   .form_submit:hover {
-    background-color: #434343cf;
+    background-color: #b4b4b4cf;
   }
   
   .form_line {

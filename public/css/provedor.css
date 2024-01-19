@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
 *{
     padding: 0px;
     margin: 0px;
@@ -35,10 +37,6 @@
     border-left: 5px solid transparent;
 }
 
-#header li a:hover{
-    color: #ddd;
-}
-
 h1{
     color: #fff;
     font-family: 'Fredoka';
@@ -53,11 +51,11 @@ h1{
     outline: none;
     padding: .5rem;
     width: 100%;
-    border-radius: 20px 0px 0px 20px;
-    -webkit-border-radius: 20px 0px 0px 20px;
-    -moz-border-radius: 20px 0px 0px 20px;
-    -ms-border-radius: 20px 0px 0px 20px;
-    -o-border-radius: 20px 0px 0px 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 #navbar{
@@ -86,10 +84,15 @@ ul{
     border-left: 5px solid transparent;
 }
 
-#navbar-ul li a:hover{
+#navbar-ul li a:hover,
+#header li a:hover{
+    transform: scale(1.15);
     color: #ddd;
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
 }
-
 #contenido{
     display: flex;
     flex-direction: column;
@@ -123,6 +126,10 @@ ul{
     cursor: pointer;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.12);
 } */
+
+h2 a{
+    color: #000;
+}
 
 .container-img{
     display: flex;

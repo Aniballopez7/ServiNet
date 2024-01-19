@@ -5,7 +5,7 @@
         <h2>Ultimos añadidos</h2>
     </div>
     <section class="services">
-        <div class="services-card">
+        <a href="provedor" class="services-card">
             <div class="container-img">
                 <img src="https://th.bing.com/th/id/R.4b4dfce5cc39d3fe58463d18593da9f0?rik=%2b3MT5Pzj9EzbDQ&pid=ImgRaw&r=0"
                     class="imagen-prov">
@@ -16,8 +16,8 @@
             <div class='container-precio'>
                 <p class="precio-servicio">3600$</p>
             </div>
-        </div>
-        <div class="services-card">
+        </a>
+        <a href="provedor" class="services-card">
             <div class="container-img">
                 <img src="https://th.bing.com/th/id/R.4b4dfce5cc39d3fe58463d18593da9f0?rik=%2b3MT5Pzj9EzbDQ&pid=ImgRaw&r=0"
                     class="imagen-prov">
@@ -28,8 +28,8 @@
             <div class='container-precio'>
                 <p class="precio-servicio">3600$</p>
             </div>
-        </div>
-        <div class="services-card">
+        </a>
+        <a href="provedor" class="services-card">
             <div class="container-img">
                 <img src="https://th.bing.com/th/id/R.4b4dfce5cc39d3fe58463d18593da9f0?rik=%2b3MT5Pzj9EzbDQ&pid=ImgRaw&r=0"
                     class="imagen-prov">
@@ -40,8 +40,8 @@
             <div class='container-precio'>
                 <p class="precio-servicio">3600$</p>
             </div>
-        </div>
-        <div class="services-card">
+        </a>
+        <a href="provedor" class="services-card">
             <div class="container-img">
                 <img src="https://th.bing.com/th/id/R.4b4dfce5cc39d3fe58463d18593da9f0?rik=%2b3MT5Pzj9EzbDQ&pid=ImgRaw&r=0"
                     class="imagen-prov">
@@ -52,8 +52,8 @@
             <div class='container-precio'>
                 <p class="precio-servicio">3600$</p>
             </div>
-        </div>
-        <div class="services-card">
+        </a>
+        <a href="provedor" class="services-card">
             <div class="container-img">
                 <img src="https://th.bing.com/th/id/R.4b4dfce5cc39d3fe58463d18593da9f0?rik=%2b3MT5Pzj9EzbDQ&pid=ImgRaw&r=0"
                     class="imagen-prov">
@@ -64,6 +64,6 @@
             <div class='container-precio'>
                 <p class="precio-servicio">3600$</p>
             </div>
-        </div>
+        </a>
     </section>
 @endsection
