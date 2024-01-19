@@ -32,8 +32,8 @@
         <figure class="full-width navLateral-body-tittle-menu">
             <figcaption>
                 <span>
-                    Full Name Admin<br>
-                    <small>Admin</small>
+                    {{ Auth::user()->name }}<br>
+                    <small>{{ Auth::user()->name }}</small>
                 </span>
             </figcaption>
         </figure>
@@ -140,11 +140,37 @@
             <div class="mdl-tooltip" for="btn-menu">Ocultar / Ver MENU</div>
             <nav class="navBar-options-list">
                 <ul class="list-unstyle">
-                    <li class="btn-exit" id="btn-exit">
-                        <i class="zmdi zmdi-power"></i>
-                        <div class="mdl-tooltip" for="btn-exit">LogOut</div>
+                    @guest
+                    @if (Route::has('login'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                    @endif
+
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </li>
+                    @endif
+                @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                {{ __('Cerrar Sesion') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
                     </li>
-                    <li class="text-condensedLight noLink" ><small>User Name</small></li>
+                @endguest
                 </ul>
             </nav>
         </div>

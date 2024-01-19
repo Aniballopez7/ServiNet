@@ -10,7 +10,7 @@
         <article class="full-width tile">
             <div class="tile-text">
                 <span class="text-condensedLight">
-                    10<br>
+                    {{$test}}<br>
                     <small>Pruebas</small>
                 </span>
             </div>
@@ -19,7 +19,7 @@
         <article class="full-width tile">
             <div class="tile-text">
                 <span class="text-condensedLight">
-                    12<br>
+                    {{$verif}}<br>
                     <small>Verificaciones</small>
                 </span>
             </div>
@@ -28,7 +28,7 @@
         <article class="full-width tile">
             <div class="tile-text">
                 <span class="text-condensedLight">
-                    100<br>
+                    {{$customer}}<br>
                     <small>Clientes</small>
                 </span>
             </div>
@@ -37,7 +37,7 @@
         <article class="full-width tile">
             <div class="tile-text">
                 <span class="text-condensedLight">
-                    12<br>
+                    {{$supplier}}<br>
                     <small>Proveedores</small>
                 </span>
             </div>

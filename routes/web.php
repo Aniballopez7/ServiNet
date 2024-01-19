@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\cursoController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RolsController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\TestController;
@@ -30,28 +31,30 @@ Route::get('/', function () {
 });
 // ->middleware('auth'); //logueado para entrar en modo de ejemplo (no aplicable)
 
-Route::get('/dashboard', function () {
+/* Route::get('/dashboard', function () {
     return view('dashboard.index');
-});
+}); */
 /* Route::get('/roles', function () {
     return view('dashboard.roles.index');
 }); */
 /* Route::get('/verifications', function () {
     return view('dashboard.verifications.index');
 }); */
-Route::resource('roles',RolsController::class);
-Route::resource('test',TestController::class);
-Route::resource('customer',CustomerController::class);
-Route::resource('supplier',SupplierController::class);
+Route::resource('dashboard',DashboardController::class)->middleware('auth');
+Route::resource('roles',RolsController::class)->middleware('auth');
+Route::resource('test',TestController::class)->middleware('auth');
+Route::resource('customer',CustomerController::class)->middleware('auth');
+Route::resource('supplier',SupplierController::class)->middleware('auth');
+Route::resource('verification',VerificationController::class)->middleware('auth');
 
 /* Route::resource('verification',VerificationController::class); */
 
 /* Route::get('/tests', function () {
     return view('dashboard.tests.index');
 }); */
-Route::get('/suppliers', function () {
+/* Route::get('/suppliers', function () {
     return view('dashboard.suppliers.index');
-});
+}); */
 
 Route::get('/registro', function () {
     return view('front.register.register');
