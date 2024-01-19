@@ -56,8 +56,7 @@ class CustomerController extends Controller
             'users_id' => $user->id,
         ]);
 
-        return redirect()->route('customer.index') //llevar a perfil de frontend
-            ->with('success', 'Registrado con éxito');
+        return redirect()->route('login')->with('success', 'Registrado con éxito');
 
     }
 
