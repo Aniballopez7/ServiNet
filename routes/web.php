@@ -6,6 +6,7 @@ use App\Http\Controllers\cursoController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RolsController;
+use App\Http\Controllers\ShopController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\VerificationController;
@@ -26,47 +27,38 @@ Auth::routes();
 
 /* Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('front.home.index');
-});
-// ->middleware('auth'); //logueado para entrar en modo de ejemplo (no aplicable)
+}); */
 
-/* Route::get('/dashboard', function () {
-    return view('dashboard.index');
-}); */
-/* Route::get('/roles', function () {
-    return view('dashboard.roles.index');
-}); */
-/* Route::get('/verifications', function () {
-    return view('dashboard.verifications.index');
-}); */
+Route::resource('/',ShopController::class);
+Route::get('shop/customer/{id}/edit', '\App\Http\Controllers\ShopController@editCustomer')->name('shop.editCustomer');
+Route::get('shop/supplier/{id}/edit', '\App\Http\Controllers\ShopController@editSupplier')->name('shop.editSupplier');
+
+Route::get('shop/customer/{id}/show', '\App\Http\Controllers\ShopController@showCustomer')->name('shop.showCustomer');
+Route::get('shop/supplier/{id}/show', '\App\Http\Controllers\ShopController@showSupplier')->name('shop.showSupplier');
+
+Route::get('shop/customer/{id}/update', '\App\Http\Controllers\ShopController@updateCustomer')->name('shop.updateCustomer');
+Route::get('shop/supplier/{id}/update', '\App\Http\Controllers\ShopController@updateSupplier')->name('shop.updateSupplier');
+
+
 Route::resource('dashboard',DashboardController::class)->middleware('auth');
 Route::resource('roles',RolsController::class)->middleware('auth');
 Route::resource('test',TestController::class)->middleware('auth');
-Route::resource('customer',CustomerController::class)->except(['customer.store']);
+Route::resource('customer',CustomerController::class)->middleware('auth')->except(['customer.store']);
 Route::resource('supplier',SupplierController::class)->middleware('auth');
 Route::resource('verification',VerificationController::class)->middleware('auth');
 
-/* Route::resource('verification',VerificationController::class); */
-
-/* Route::get('/tests', function () {
-    return view('dashboard.tests.index');
-}); */
-/* Route::get('/suppliers', function () {
-    return view('dashboard.suppliers.index');
-}); */
 
 Route::get('/registro', function () {
     return view('front.register.register');
 });
 
-Route::get('/entrar', function () {
-    return view('front.login.login');
-});
-
 Route::get('/registroProvedor', function (){
     return view('front.register.registerProviders');
 });
+
+
 
 Route::get('/editarUsuario', function (){
     return view('front.profileConfig.profileUser');

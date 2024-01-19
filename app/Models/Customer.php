@@ -19,8 +19,8 @@ class Customer extends Model
 
     protected $fillable = ['name','subname','cedula','edad','users_id'];
 
-    public function users(){
-        return $this->hasMany(User::class, 'users_id', 'id');
+    public function user(){
+        return $this->belongsTo(User::class, 'users_id', 'id');
     }
 
     //falta desarrollar para la tabla pivote

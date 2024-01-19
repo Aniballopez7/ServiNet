@@ -44,7 +44,17 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function rols(){
+    public function rols()
+    {
         return $this->belongsTo(Rols::class, 'rols_id', 'id');
+    }
+    public function customer()
+    {
+        return $this->hasOne(Customer::class,'users_id', 'id');
+    }
+
+    public function supplier()
+    {
+        return $this->hasOne(Supplier::class,'users_id', 'id');
     }
 }

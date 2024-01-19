@@ -21,7 +21,7 @@ class Supplier extends Model
 
     protected $fillable = ['name','subname','dni','phone','img_ref','users_id','verifications_id',];
 
-    public function users(){
+    public function user(){
         return $this->hasMany(User::class, 'users_id', 'id');
     }
     public function verifications(){
