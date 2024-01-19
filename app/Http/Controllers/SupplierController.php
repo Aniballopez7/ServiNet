@@ -50,9 +50,8 @@ class SupplierController extends Controller
             'img_ref' => null,
             'users_id' => $user->id,
         ]);
-
-        return redirect()->route('supplier.index') //llevar a perfil de frontend
-            ->with('success', 'Registrado con éxito');
+        
+        return redirect()->route('login')->with('success', 'Registrado con éxito');
     }
 
     /**

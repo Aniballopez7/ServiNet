@@ -46,7 +46,7 @@ Route::resource('dashboard',DashboardController::class)->middleware('auth');
 Route::resource('roles',RolsController::class)->middleware('auth');
 Route::resource('test',TestController::class)->middleware('auth');
 Route::resource('customer',CustomerController::class)->except(['customer.store']);
-Route::resource('supplier',SupplierController::class)->middleware('auth');
+Route::resource('supplier',SupplierController::class);
 Route::resource('verification',VerificationController::class)->middleware('auth');
 
 
