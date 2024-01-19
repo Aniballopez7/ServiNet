@@ -74,3 +74,7 @@ Route::get('/verUsuario', function (){
 Route::get('/verProvedor', function (){
     return view('front.profileView.profileProviders');
 });
+
+Route::get('/provedor', function (){
+    return view('front.providers.providers');
+});

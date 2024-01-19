@@ -49,11 +49,11 @@ h1{
     outline: none;
     padding: .5rem;
     width: 100%;
-    border-radius: 20px 0px 0px 20px;
-    -webkit-border-radius: 20px 0px 0px 20px;
-    -moz-border-radius: 20px 0px 0px 20px;
-    -ms-border-radius: 20px 0px 0px 20px;
-    -o-border-radius: 20px 0px 0px 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 #navbar{
@@ -128,6 +128,8 @@ ul{
     -moz-transition: box-shadow .2s ease-in-out;
     -ms-transition: box-shadow .2s ease-in-out;
     -o-transition: box-shadow .2s ease-in-out;
+    text-decoration: none;
+    color: #000;
 }
 
 .services-card:hover {
