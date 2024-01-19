@@ -45,7 +45,7 @@ Route::get('shop/supplier/{id}/update', '\App\Http\Controllers\ShopController@up
 Route::resource('dashboard',DashboardController::class)->middleware('auth');
 Route::resource('roles',RolsController::class)->middleware('auth');
 Route::resource('test',TestController::class)->middleware('auth');
-Route::resource('customer',CustomerController::class)->middleware('auth')->except(['customer.store']);
+Route::resource('customer',CustomerController::class)->except(['customer.store']);
 Route::resource('supplier',SupplierController::class)->middleware('auth');
 Route::resource('verification',VerificationController::class)->middleware('auth');
 
