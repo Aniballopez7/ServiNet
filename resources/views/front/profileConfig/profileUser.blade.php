@@ -1,4 +1,4 @@
-@extends('layouts.navFront')
+@extends('layouts.editarUsuario')
 @section('title', 'Perfil')
 
 @section('content')
@@ -32,11 +32,10 @@
                     </div>
                     <div class="form_grupo">
                         <input type="password" name="password" class="form_input" placeholder=" " value="">
-                        <label for="password" class="form_label">Contraseña:</label>
+                        <label for="password" class="form_label">Correo:</label>
                         <span class="form_line"></span>
                     </div>                            
                 </div>
-                <input class="subir_archivo"  type="file" name="foto">
                 <input type="submit" class="form_submit" name="subir" value="Guardar Cambios">
             </form>
         </div>

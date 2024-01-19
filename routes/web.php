@@ -73,12 +73,12 @@ Route::get('/editarUsuario', function (){
 });
 
 Route::get('/editarProvedor', function (){
-    return view('front.profileConfig.Providers');
+    return view('front.profileConfig.profileProviders');
 });
 Route::get('/verUsuario', function (){
     return view('front.profileView.profileUser');
 });
 
 Route::get('/verProvedor', function (){
-    return view('front.profileView.Providers');
+    return view('front.profileView.profileProviders');
 });
