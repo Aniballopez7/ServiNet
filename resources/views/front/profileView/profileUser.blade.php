@@ -1,4 +1,4 @@
-@extends('layouts.navFront')
+@extends('layouts.verUsuario')
 @section('title', 'Perfil')
 
 @section('content')
