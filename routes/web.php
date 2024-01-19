@@ -65,7 +65,7 @@ Route::get('/entrar', function () {
 });
 
 Route::get('/registroProvedor', function (){
-    return view('front.registerProviders');
+    return view('front.register.registerProviders');
 });
 
 Route::get('/editarUsuario', function (){
