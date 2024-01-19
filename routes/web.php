@@ -23,9 +23,9 @@ use App\Http\Controllers\VerificationController;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/* Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); */
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('front.home.index');
 });
 // ->middleware('auth'); //logueado para entrar en modo de ejemplo (no aplicable)
