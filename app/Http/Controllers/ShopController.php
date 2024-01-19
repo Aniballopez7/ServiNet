@@ -16,6 +16,7 @@ class ShopController extends Controller
     public function index()
     {
         $user = Auth::user(); // Obtener el usuario autenticado, si existe
+        $supplier_totals = Supplier::all();
 
         if ($user) {
             // Obtener el customer asociado al usuario (si existe)
@@ -24,9 +25,9 @@ class ShopController extends Controller
             // Obtener el supplier asociado al usuario (si existe)
             $supplier = $user->supplier;
     
-            return view('front.home.index', compact('user', 'customer', 'supplier'));
+            return view('front.home.index', compact('user', 'customer', 'supplier', 'supplier_totals'));
         } else {
-            return view('front.home.index');
+            return view('front.home.index', compact('supplier_totals'));
         }
     }
 
@@ -60,6 +61,12 @@ class ShopController extends Controller
         $supplier = Supplier::find($id);
 
         return view('front.profileView.profileProviders', compact('supplier'));
+    }
+    public function showOneSupplier(string $id)
+    {
+        $supplier = Supplier::find($id);
+
+        return view('front.providers.providers', compact('supplier'));
     }
 
     /**
@@ -99,9 +106,6 @@ class ShopController extends Controller
         $customer = Customer::find($id);
 
         $customer->update($request->all());
-
-        /* return view('front.profileView.profileUser', compact('customer'))->with('success', 'Datos actualizados con éxito'); */
-        /* return view('front.home.index'); */
         
         if ($customer) {
             return view('front.profileView.profileUser', compact('customer'))->with('success', 'Datos actualizados con éxito');
@@ -109,9 +113,24 @@ class ShopController extends Controller
             return back()->with('error', 'No se pudo recuperar el cliente actualizado');
         }
     }
-    public function updateSupplier(Request $request, string $id)
+    public function updateSupplier(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|string',
+            'subname' => 'required|string',
+            'dni' => 'required|integer|min:7',
+            'phone' => 'required|integer',
+            'users_id' => 'required',
+        ]);
+        $supplier = Supplier::find($id);
+
+        $supplier->update($request->all());
+        
+        if ($supplier) {
+            return view('front.profileView.profileProviders', compact('supplier'))->with('success', 'Datos actualizados con éxito');
+        } else {
+            return back()->with('error', 'No se pudo recuperar el cliente actualizado');
+        }
     }
 
     /**
