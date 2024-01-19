@@ -15,16 +15,19 @@ class ShopController extends Controller
      */
     public function index()
     {
-        $user = Auth::user(); // Obtener el usuario autenticado
+        $user = Auth::user(); // Obtener el usuario autenticado, si existe
 
-        // Obtener el customer asociado al usuario (si existe)
-        $customer = $user->customer;
+        if ($user) {
+            // Obtener el customer asociado al usuario (si existe)
+            $customer = $user->customer;
     
-        // Obtener el supplier asociado al usuario (si existe)
-        $supplier = $user->supplier;
+            // Obtener el supplier asociado al usuario (si existe)
+            $supplier = $user->supplier;
     
-        return view('front.home.index', compact('user', 'customer', 'supplier'));
-
+            return view('front.home.index', compact('user', 'customer', 'supplier'));
+        } else {
+            return view('front.home.index');
+        }
     }
 
     /**
