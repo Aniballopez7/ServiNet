@@ -62,6 +62,12 @@ class ShopController extends Controller
 
         return view('front.profileView.profileProviders', compact('supplier'));
     }
+    public function showOneSupplier(string $id)
+    {
+        $supplier = Supplier::find($id);
+
+        return view('front.providers.providers', compact('supplier'));
+    }
 
     /**
      * Show the form for editing the specified resource.

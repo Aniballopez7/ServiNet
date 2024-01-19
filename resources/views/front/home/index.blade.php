@@ -25,9 +25,9 @@
     </div>
     <section class="services">
         @foreach ($supplier_totals as $supplier)            
-        <a href="provedor" class="services-card">
+        <a href="{{ route('shop.showOneSupplier',$supplier->id) }}" class="services-card">
             <div class="container-img">
-                <img src="https://th.bing.com/th/id/R.4b4dfce5cc39d3fe58463d18593da9f0?rik=%2b3MT5Pzj9EzbDQ&pid=ImgRaw&r=0"
+                <img src="{{ asset('storage/' . $supplier->img_ref) }}"
                     class="imagen-prov"> {{-- img de base de datos --}}
             </div>
             <div class='container-servicio'>

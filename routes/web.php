@@ -41,6 +41,8 @@ Route::get('shop/supplier/{id}/show', '\App\Http\Controllers\ShopController@show
 Route::get('shop/customer/{id}/update', '\App\Http\Controllers\ShopController@updateCustomer')->name('shop.updateCustomer');
 Route::get('shop/supplier/{id}/update', '\App\Http\Controllers\ShopController@updateSupplier')->name('shop.updateSupplier');
 
+Route::get('shop/supplier/{id}/showOne', '\App\Http\Controllers\ShopController@showOneSupplier')->name('shop.showOneSupplier');
+
 
 Route::resource('dashboard',DashboardController::class)->middleware('auth');
 Route::resource('roles',RolsController::class)->middleware('auth');
