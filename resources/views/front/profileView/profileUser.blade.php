@@ -25,11 +25,7 @@
                     <div class="form_grupo">
                         <div for="apellido" class="form_div" value="">Edad:</div>
                         <div><p>P{{$customer->edad}}</p></div>
-                    </div>
-                    <div class="form_grupo">
-                        <div for="email" class="form_div">Correo:</div>
-                        <div><p>{{-- {{$customer->user->email}} --}}</p></div>
-                    </div>                            
+                    </div>                        
                 </div>
                 <input type="submit" class="form_submit" name="subir" value="Editar Perfil">
                 <a class="btn btn-sm btn-success" href="{{ route('shop.editCustomer',$customer->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>

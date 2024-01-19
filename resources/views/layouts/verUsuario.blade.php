@@ -12,7 +12,7 @@
 <body>  
     <div id="container">
         <div id="header">
-            <h1 class="titulo">ServiNet</h1>
+            <h1><a href="/" class="titulo">ServiNet</a></h1>
             <form action="" class="barraNavegacion">
                 <!-- <label class="buscarServicio">Buscar Servicio:</label> -->
                 <input type="text" id="buscar" name="buscar" class="proveedor"

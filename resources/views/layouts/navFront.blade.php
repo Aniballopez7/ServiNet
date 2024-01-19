@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('css/configuracionUsuario.css') }}">
-
     <title>@yield('title')</title>
 </head>
 
 <body>  
     <div id="container">
         <div id="header">
-            <h1 class="titulo">ServiNet</h1>
+            <h1><a href="/" class="titulo">ServiNet</a></h1>
             <form action="" class="barraNavegacion">
                 <!-- <label class="buscarServicio">Buscar Servicio:</label> -->
                 <input type="text" id="buscar" name="buscar" class="proveedor"
@@ -37,7 +36,7 @@
                 @endif
                 @else
                 <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a>
 
@@ -71,5 +70,5 @@
         </div>
     </div>
 </body>
-
+<script src="{{ asset('js/verEditar.js') }}" ></script>
 </html>

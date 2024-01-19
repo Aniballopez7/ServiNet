@@ -2,25 +2,32 @@
 @section('title', 'ServiNet')
 @section('content')
     <div class="recently-added">
-        @if (Auth::check())
+       
+        <div class="union">
+            <h2>Ultimos añadidos</h2>
+            @if (Auth::check())
             <!-- Mostrar la información del customer, si existe -->
             @if (isset($customer))
-                <a class="btn btn-sm btn-success" href="{{ route('shop.editCustomer',$customer->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
-                <a class="btn btn-sm btn-success"  style="background: blue" href="{{ route('shop.showCustomer',$customer->id) }}"><i class="fa fa-fw fa-edit"></i> Ver</a>
+                <div>
+                    <a class="btn btn-sm btn-success" href="{{ route('shop.editCustomer',$customer->id) }}"><i class="fa fa-fw fa-edit"></i> Editar perfil</a>
+                    <a class="btn btn-sm btn-success"  href="{{ route('shop.showCustomer',$customer->id) }}"><i class="fa fa-fw fa-edit"></i> Ver perfil</a>
+                </div>
 {{--                 <p>{{ $customer->id }}</p>
                 <p>{{ $customer->name }}</p> --}}
                 <!-- Mostrar otros campos del customer -->
             @endif
             <!-- Mostrar la información del supplier, si existe -->
             @if (isset($supplier))
-                <a class="btn btn-sm btn-success" href="{{ route('shop.editSupplier',$supplier->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
-                <a class="btn btn-sm btn-success" style="background: blue" href="{{ route('shop.showSupplier',$supplier->id) }}"><i class="fa fa-fw fa-edit"></i> Ver</a>
+            <div>
+                <a class="btn btn-sm btn-success" href="{{ route('shop.editSupplier',$supplier->id) }}"><i class="fa fa-fw fa-edit"></i> Editar perfil</a>
+                <a class="btn btn-sm btn-success" href="{{ route('shop.showSupplier',$supplier->id) }}"><i class="fa fa-fw fa-edit"></i> Ver perfil</a>
+            </div>
 {{--                 <p>{{ $supplier->id }}</p>
                 <p>{{ $supplier->name }}</p> --}}
                 <!-- Mostrar otros campos del supplier -->
             @endif
         @endif
-        <h2>Ultimos añadidos</h2>
+        </div>
 
     </div>
     <section class="services">
