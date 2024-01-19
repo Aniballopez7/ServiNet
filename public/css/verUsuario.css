@@ -2,11 +2,8 @@
     padding: 22px 50px;
     opacity: 0.9;
     background: linear-gradient(to right, #434343, #000000);
-    background-image: radial-gradient(#0c2176 0.5px, transparent 0.5px),radial-gradient(#0c2176 0.5px, #e5e5f7 0.5px);
-    background-size: 20px 20px;
-    background-position: 0 0, 10px 10px;
     border-radius: 10px;
-    color: #0c2176;
+    color: #fff;
     width: 50%;
     max-height: 600px;
     margin: auto;
@@ -38,23 +35,22 @@
   .form_input {
     width: 100%;
     background: none;
-    color: #0c2176;
+    color: #434343;
     font-size: 1rem;
     padding: 0.6em 0.3em;
     border: none;
     outline: none;
-    border-bottom: 1px solid #0c2176;
-    font-family: "Hammersmith One";
+    border-bottom: 1px solid #434343;
   }
   .form_input:focus + .form_label,
   .form_input:not(:placeholder-shown) + .form_label {
     transform: translateY(-12px) scale(0.7);
     transform-origin: left top;
-    color: #0c2176;
+    color: #434343;
   }
   
   .form_submit {
-    background-color: #0c2176;
+    background-color: #434343;
     color: #fff;
     font-size: 1rem;
     padding: 0.8em 0;
@@ -65,7 +61,7 @@
   }
   
   .form_submit:hover {
-    background-color: #0c2176cf;
+    background-color: #434343cf;
   }
   
   .form_line {
@@ -74,7 +70,7 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: #0c2176;
+    background-color: #434343;
     transform: scale(0);
     transform-origin: left bottom;
     transition: transform 0.4s;
